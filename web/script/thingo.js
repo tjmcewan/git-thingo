@@ -1,9 +1,7 @@
+(function() {
 var canvas = document.getElementById('madCircles');
 var context = canvas.getContext('2d');
-circle.call(context, 250, 250, 250, '#FFF', '#000');
-circle.call(context, 50, 50, 5, '#ccc');
-circle.call(context, 100, 20, 10, '#bbb');
-circle.call(context, 200, 150, 70, '#ddd');
+circle.call(context, 250, 250, 250, '#FFF', {'colour':'#000', ''});
 
 function circle(x, y, radius, colour, border) {
 	this.beginPath(); 
@@ -17,5 +15,5 @@ function circle(x, y, radius, colour, border) {
 		this.fillStyle = colour;
 		this.fill();
 	}
-	
 }
+}())

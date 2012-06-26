@@ -1,5 +1,6 @@
 require 'sinatra'
-require 'debugger'
+#require 'debugger'
+set :views, settings.root + '/../web'
 
 get '/repo' do
   content_type :json
@@ -40,7 +41,7 @@ get '/repo' do
 end
 
 get '/' do
-
+  erb :index
 end
 
 # output.split("\n").map{|i| i.split("\t")}
